@@ -8,5 +8,6 @@ RUN apt-get -y install openssh-client
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 RUN apt-get install -y  python3-pip
-RUN pip3 install --upgrade pip
-RUN pip3 install  awscli --upgrade --user
+RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli.zip"
+RUN unzip awscli.zip
+RUN ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
