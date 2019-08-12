@@ -1,5 +1,6 @@
 FROM ubuntu
 RUN apt-get update
+RUN apt-get -y install sshpass
 RUN apt-get -y install apt-transport-https
 RUN apt-get -y install openssl
 RUN apt-get -y install zip
